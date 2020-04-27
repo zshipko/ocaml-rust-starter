@@ -12,6 +12,7 @@ An example project using [ocaml-rs](https://github.com/zshipko/ocaml-rs).
 - [ ] Remove `src/ocaml_rust_example.ml` and `src/ocaml_rust_example.mli` and add your own OCaml files
 - [ ] Edit `src/lib.rs`
 - [ ] Add your tests to `test/test.ml`
+- [ ] Use `cargo vendor` if you intend to make the project installable using opam
 
 ## Building
 
