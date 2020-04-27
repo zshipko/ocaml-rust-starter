@@ -1,0 +1,22 @@
+opam-version: "2.0"
+maintainer: "zachshipko@gmail.com"
+authors: ["Zach Shipko"]
+homepage: "https://github.com/zshipko/ocaml-vec"
+bug-reports: "https://github.com/zshipko/ocaml-rust-starter/issues"
+dev-repo: "git+https://github.com/zshipko/ocaml-rust-starter.git"
+license: "ISC"
+
+depends: [
+    "ocaml" {>= "4.03.0"}
+    "dune"
+    "conf-rust-2018" {build}
+]
+
+build: [
+    ["dune" "build" "-p" name]
+    ["dune" "runtest" "-p" name] {with-test}
+]
+
+synopsis: """
+ocaml-rs example
+"""

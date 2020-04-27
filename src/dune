@@ -1,0 +1,21 @@
+(include_subdirs unqualified)
+
+(rule
+ (deps
+  (source_tree .))
+ (targets libocaml_rust_starter.a dllocaml_rust_starter.so)
+ (action
+  (progn
+   (run cargo clean)
+   (run cargo build --target-dir /var/tmp/ocaml-rs --release)
+   (run sh -c
+     "mv /var/tmp/ocaml-rs/release/libocaml_rust_starter.so ./dllocaml_rust_starter.so || \
+      mv /var/tmp/ocaml-rs/release/libocaml_rust_starter.dylib ./dllocaml_rust_starter.so")
+   (run mv /var/tmp/ocaml-rs/release/libocaml_rust_starter.a libocaml_rust_starter.a))))
+
+(library
+ (name ocaml_rust_starter)
+ (public_name ocaml-rust-starter)
+ (foreign_archives ocaml_rust_starter)
+ (c_library_flags
+  (-lpthread -lc -lm)))
