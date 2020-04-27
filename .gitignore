@@ -1,2 +1,3 @@
 _build
 .merlin
+Cargo.lock

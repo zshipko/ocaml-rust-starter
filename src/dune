@@ -1,8 +1,6 @@
 (include_subdirs unqualified)
 
 (rule
- (deps
-  (source_tree .))
  (targets libocaml_rust_starter.a dllocaml_rust_starter.so)
  (action
   (progn
