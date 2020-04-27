@@ -5,11 +5,11 @@
  (action
   (progn
    (run cargo clean)
-   (run cargo build --target-dir /var/tmp/ocaml-rs --release)
+   (run cargo build --target-dir /tmp/ocaml-rs --release)
    (run sh -c
-     "mv /var/tmp/ocaml-rs/release/libocaml_rust_starter.so ./dllocaml_rust_starter.so || \
-      mv /var/tmp/ocaml-rs/release/libocaml_rust_starter.dylib ./dllocaml_rust_starter.so")
-   (run mv /var/tmp/ocaml-rs/release/libocaml_rust_starter.a libocaml_rust_starter.a))))
+     "mv /tmp/ocaml-rs/release/libocaml_rust_starter.so ./dllocaml_rust_starter.so || \
+      mv /tmp/ocaml-rs/release/libocaml_rust_starter.dylib ./dllocaml_rust_starter.so")
+   (run mv /tmp/ocaml-rs/release/libocaml_rust_starter.a libocaml_rust_starter.a))))
 
 (library
  (name ocaml_rust_starter)
