@@ -14,6 +14,16 @@ An example project using [ocaml-rs](https://github.com/zshipko/ocaml-rs).
 - [ ] Add your tests to `test/test.ml`
 - [ ] Use `cargo vendor` if you intend to make the project installable using opam
 
+Much of this, mostly the renaming steps, can be automated using `init.sh`:
+
+```shell
+$ ./init.sh my_project my-project
+```
+
+`init.sh` accepts two arguments: the `name` of the OCaml project and the `public_name`, if they are the same then one argument is acceptable.
+
+NOTE: `init.sh` is destructive and can only be executed once, because of this it will remove itself when executed. Make sure you have no modifications that you want to keep before running `init.sh`
+
 ## Building
 
     dune build
