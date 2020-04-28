@@ -22,7 +22,7 @@ $ ./init.sh my_project my-project
 
 `init.sh` accepts two arguments: the `name` of the OCaml project and the `public_name`, if they are the same then one argument is acceptable.
 
-NOTE: `init.sh` is destructive and can only be executed once - make sure you have no modifications that you want to keep before running `init.sh`
+NOTE: `init.sh` is destructive and can only be executed once (it will remove itself) - make sure you have no modifications that you want to keep before running `init.sh`.
 
 ## Building
 
