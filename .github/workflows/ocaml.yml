@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+        ocaml-version: ["4.12.0"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: OCaml/Opam cache
+        id: ocaml-rust-starter-opam-cache
+        uses: actions/cache@v2
+        with:
+          path: "~/.opam"
+          key: ocaml-rust-starter-opam-${{ matrix.ocaml-version }}-${{ matrix.os }}
+      - name: Use OCaml ${{ matrix.ocaml-version }}
+        uses: avsm/setup-ocaml@v1
+        with:
+          ocaml-version: ${{ matrix.ocaml-version }}
+      - name: Set Opam env
+        run: opam env >> $GITHUB_ENV
+      - name: Add Opam switch to PATH
+        run: opam var bin >> $GITHUB_PATH
+      - run: opam install dune
+      - name: Run tests
+        run: opam exec -- dune runtest
