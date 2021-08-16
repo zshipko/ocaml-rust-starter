@@ -32,4 +32,11 @@ to run the tests:
 
     dune runtest
 
+to load your library into an interactive sesssion:
+
+  OCAML_INTEROP_NO_CAML_STARTUP=1 dune utop
+
+The `OCAML_INTEROP_NO_CAML_STARTUP` environment variable should be set to ensure
+the library is linked correctly.
+
 
