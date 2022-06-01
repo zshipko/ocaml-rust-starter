@@ -1,6 +1,8 @@
 # ocaml-rust-starter
 
-An example project using [ocaml-rs](https://github.com/zshipko/ocaml-rs).
+An example project using [ocaml-rs](https://github.com/zshipko/ocaml-rs) to call Rust functions from OCaml.
+
+If you're looking for an example of linking an OCaml library into a Rust program take a look at [rust-ocaml-starter](https://github.com/zshipko/rust-ocaml-starter)
 
 ## New project checklist
 
