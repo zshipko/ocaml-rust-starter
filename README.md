@@ -12,6 +12,7 @@ If you're looking for an example of linking an OCaml library into a Rust program
 - [ ] Update `src/dune` and `test/dune` with the name of your project in place of `ocaml_rust_example`/`ocaml-rust-example`
 - [ ] Rename `ocaml-rust-starter.opam` to match the name of your project
 - [ ] Remove `src/ocaml_rust_example.ml` and `src/ocaml_rust_example.mli` and add your own OCaml files
+- [ ] Update `build.rs`
 - [ ] Edit `src/lib.rs`
 - [ ] Add your tests to `test/test.ml`
 - [ ] Use `cargo vendor` if you intend to make the project installable using opam

@@ -5,10 +5,13 @@ authors = ["Zach Shipko <zachshipko@gmail.com>"]
 edition = "2018"
 
 [lib]
-crate-type = ["staticlib", "cdylib"]
+crate-type = ["staticlib"] # "cdylib"]
 
 [dependencies]
-ocaml = "*"
+ocaml = {version = "^1.0.0-beta"}
+
+[build-dependencies]
+ocaml-build = {version = "^1.0.0-beta"}
 
 # Or use the development version:
 # ocaml = {git = "git://github.com/zshipko/ocaml-rs"}
