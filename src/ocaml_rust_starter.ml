@@ -2,6 +2,6 @@
 
 open! Bigarray
 
-(* file: /mnt/devel/ocaml-rust-starter/src/lib.rs *)
+(* file: lib.rs *)
 
 external hello_world: unit -> string = "hello_world"

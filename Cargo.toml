@@ -5,10 +5,10 @@ authors = ["Zach Shipko <zachshipko@gmail.com>"]
 edition = "2018"
 
 [lib]
-crate-type = ["staticlib"] # "cdylib"]
+crate-type = ["staticlib", "cdylib"]
 
 [dependencies]
-ocaml = {version = "^1.0.0-beta"}
+ocaml = {path = "../ocaml-rs", version = "^1.0.0-beta"}
 
 [build-dependencies]
 ocaml-build = {version = "^1.0.0-beta"}
