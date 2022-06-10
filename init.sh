@@ -46,7 +46,7 @@ replace 's/ocaml-rust-starter/'"$public_name"'/g' test/dune
 replace 's/ocaml-rust-starter/'"$public_name"'/g' Cargo.toml
 replace 's/ocaml_rust_starter/'"$name"'/g' build.rs
 printf "# $public_name\n" >README.md
-mv ocaml-rust-starter.opam $public_name.opam
+rm ocaml-rust-starter.opam ## regenerate opam file from dune-project
 mv src/ocaml_rust_starter.ml src/$name.ml || :
 mv src/ocaml_rust_starter.mli src/$name.mli
 echo "" >test/test.ml
