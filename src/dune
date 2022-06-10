@@ -1,5 +1,5 @@
 (rule
- (targets libocaml_rust_starter.a)
+ (targets libocaml_rust_starter.a dllocaml_rust_starter.so)
  (deps (glob_files *.rs))
  (action
   (progn

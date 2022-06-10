@@ -10,4 +10,4 @@
  (depends
   (ocaml (>= "4.03.0"))
   (dune (>= "1.5"))
-  conf-rust-2018))
+  conf-rust))
