@@ -8,7 +8,7 @@ edition = "2018"
 crate-type = ["staticlib", "cdylib"]
 
 [dependencies]
-ocaml = {path = "../ocaml-rs", version = "^1.0.0-beta"}
+ocaml = {version = "^1.0.0-beta"}
 
 [build-dependencies]
 ocaml-build = {version = "^1.0.0-beta"}
