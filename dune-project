@@ -1,10 +1,10 @@
 (lang dune 2.0)
-(name dedupe-ml-rs)
+(name ocaml-rust-starter)
 
 (generate_opam_files true)
 
 (package
- (name dedupe-ml-rs)
+ (name ocaml-rust-starter)
  (synopsis "FIXME:")
  (description "FIXME:")
  (depends
