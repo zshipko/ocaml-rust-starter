@@ -14,4 +14,4 @@ ocaml = {version = "^1.0.0-beta"}
 ocaml-build = {version = "^1.0.0-beta"}
 
 # Or use the development version:
-# ocaml = {git = "git://github.com/zshipko/ocaml-rs"}
+# ocaml = {git = "https://github.com/zshipko/ocaml-rs.git"}
