@@ -8,10 +8,10 @@ edition = "2021"
 crate-type = ["staticlib", "cdylib"]
 
 [dependencies]
-ocaml = {version = "^1.0.0-beta"}
+ocaml = {version = "^1.0.0"}
 
 [build-dependencies]
-ocaml-build = {version = "^1.0.0-beta"}
+ocaml-build = {version = "^1.0.0"}
 
 # Or use the development version:
 # ocaml = {git = "https://github.com/zshipko/ocaml-rs.git"}
